@@ -50,25 +50,25 @@ void xuat_mang(int b[][10], int m, int n) {
 //    cout << "Mang sau khi hoan doi dong:\n";
 //}
 //
-//void tong_gia_tri_bien(int b[][10], int m, int &tong_bien) {
-//    tong_bien = 0; // 1 + 2 + 3 + 4 + 6 + 7 + 8 + 9 = 40
-//
-//    for (int j = 0; j < m; j++) {
-//        tong_bien += b[0][j]; // Dòng trên cùng: 1 2 3
-//        if (m > 1) {
-//            tong_bien += b[m - 1][j]; // Dòng dưới cùng: 7 8 9
-//        }
-//    }
-//
-//    for (int i = 0; i < m - 2; i++) {
-//        tong_bien += b[i][0]; // Cột bên trái: 4
-//        if (m > 1) {
-//            tong_bien += b[i][m - 1]; // Cột bên phải: 6
-//        }
-//    }
-//
-//    cout << "tong_bien gia tri bien cua mang: " << tong_bien << endl;
-//}
+void tong_gia_tri_bien(int b[][10], int m, int &tong_bien) {
+    tong_bien = 0; // 1 + 2 + 3 + 4 + 6 + 7 + 8 + 9 = 40
+
+    for (int i = 0; i < m; i++) {
+        tong_bien += b[i][0]; // Cột bên trái: 4
+        if (m > 1) {
+            tong_bien += b[i][m - 1]; // Cột bên phải: 6
+        }
+    }
+
+    for (int j = 1; j < m - 1; j++) {
+        tong_bien += b[0][j]; // Dòng trên cùng: 1 2 3
+        if (m > 1) {
+            tong_bien += b[m - 1][j]; // Dòng dưới cùng: 7 8 9
+        }
+    }
+
+    cout << "tong_bien gia tri bien cua mang: " << tong_bien << endl;
+}
 
 void tinh_trung_binh_cheo_lon_nhat(int b[][10], int m) {
     double tb_cheo_chinh = 0, tb_cheo_phu = 0;

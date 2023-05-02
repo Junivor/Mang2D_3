@@ -9,13 +9,13 @@ int main() {
     nhap_mang(c, a, b);
     xuat_mang(c, a, b);
 
-//    int cot1, cot2, dong1, dong2, tong_bien;
+    int cot1, cot2, dong1, dong2, tong_bien;
 //    hoan_doi_cot(c, a, cot1, cot2);
 //    xuat_mang(c, a, b);
 //    hoan_doi_dong(c, a, dong1, dong2);
 //    xuat_mang(c, a, b);
 //
-//    tong_gia_tri_bien(c, a, tong_bien);
+    tong_gia_tri_bien(c, a, tong_bien);
 
     tinh_trung_binh_cheo_lon_nhat(c, a);
     tinh_trung_binh_cheo_nho_nhat(c, a);
