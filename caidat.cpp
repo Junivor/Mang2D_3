@@ -168,3 +168,56 @@ void tong_tam_giac_cheo_nho_nhat(int b[][10], int m) {
     cout << ">>Tong tam giac nho nhat: " << smallest_tong << "\n\n";
 }
 
+void tong_dong_max(int b[][10], int m, int &tongdong1, int &tongdong2, int &tongdong3) {
+    tongdong1 = 0;
+    tongdong2 = 0;
+    tongdong3 = 0;
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            if (i == 0) {
+                tongdong1 += b[i][j]; // 1 + 2 + 3
+            }
+            if (i == 1) {
+                tongdong2 += b[i][j]; // 4 + 5 + 6
+            }
+            if (i == 2) {
+                tongdong3 += b[i][j]; // 7 + 8 + 9
+            }
+        }
+    }
+
+    cout << "Tong dong 1: " << tongdong1 << endl;
+    cout << "Tong dong 2: " << tongdong2 << endl;
+    cout << "Tong dong 3: " << tongdong3 << endl;
+
+    int largest_tongdong = max(tongdong1, max(tongdong2, tongdong3));
+    cout << "Trong " << m << " dong, dong co so tong lon nhat la: " << largest_tongdong << endl;
+}
+
+void tong_cot_max(int b[][10], int m, int &tongcot1, int &tongcot2, int &tongcot3) {
+    tongcot1 = 0;
+    tongcot2 = 0;
+    tongcot3 = 0;
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            if (j == 0) {
+                tongcot1 += b[i][j]; // 1 + 4 + 7
+            }
+            if (j == 1) {
+                tongcot2 += b[i][j]; // 2 + 5 + 8
+            }
+            if (j == 2) {
+                tongcot3 += b[i][j]; // 7 + 8 + 9
+            }
+        }
+    }
+
+    cout << "Tong cot 1: " << tongcot1 << endl;
+    cout << "Tong cot 2: " << tongcot2 << endl;
+    cout << "Tong cot 3: " << tongcot3 << endl;
+
+    int largest_tongcot = max(tongcot1, max(tongcot2, tongcot3));
+    cout << "Trong " << m << " dong, dong co so tong lon nhat la: " << largest_tongcot << endl;
+}

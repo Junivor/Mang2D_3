@@ -11,7 +11,8 @@ void tinh_trung_binh_cheo_lon_nhat(int b[][10], int m);
 void tinh_trung_binh_cheo_nho_nhat(int b[][10], int m);
 void tong_tam_giac_cheo_lon_nhat(int b[][10], int m);
 void tong_tam_giac_cheo_nho_nhat(int b[][10], int m);
-
+void tong_dong_max(int b[][10], int m, int &tongdong1, int &tongdong2, int &tongdong3);
+void tong_cot_max(int b[][10], int m, int &tongcot1, int &tongcot2, int &tongcot3);
 
 #ifndef MANG2D_3_THUVIEN_H
 #define MANG2D_3_THUVIEN_H
