@@ -4,7 +4,7 @@ int main() {
     const int so = 10;
     int a = so;
     int b = so;
-    int c[a][10];
+    int c[so][10];
     nhap(a, b);
     nhap_mang(c, a, b);
     xuat_mang(c, a, b);

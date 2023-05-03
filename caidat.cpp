@@ -163,6 +163,7 @@ void tong_tam_giac_cheo_nho_nhat(int b[][10], int m) {
          << "Tong tam giac tren cheo phu: " << tong2 << "\n"
          << "Tong tam giac duoi cheo chinh: " << tong3 << "\n"
          << "Tong tam giac duoi cheo phu: " << tong4 << "\n";
+
     int smallest_tong = min(min(tong1, tong2), min(tong3, tong4));
     cout << ">>Tong tam giac nho nhat: " << smallest_tong << "\n\n";
 }
