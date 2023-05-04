@@ -40,7 +40,7 @@ void hoan_doi_cot(int b[][10], int m) {
     cout << "Mang sau khi hoan doi cot:\n" ;
 }
 
-void hoan_doi_dong(int b[][10], int m, int dong1, int dong2) {
+void hoan_doi_dong(int b[][10], int m) {
     int dong1 = 0; int dong2 = 0;
     cout << "Nhap hai dong can hoan doi (0-based index): ";
     cin >> dong1 >> dong2;
