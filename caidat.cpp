@@ -28,28 +28,30 @@ void xuat_mang(int b[][10], int m, int n) {
     }
 }
 
-//void hoan_doi_cot(int b[][10], int m, int cot1, int cot2) {
-//    cout << "Nhap hai cot can hoan doi (0-based index): ";
-//    cin >> cot1 >> cot2;
-//    for (int i = 0; i < m; i++) {
-//        int temp = b[i][cot1];
-//        b[i][cot1] = b[i][cot2];
-//        b[i][cot2] = temp;
-//    }
-//    cout << "Mang sau khi hoan doi cot:\n" ;
-//}
-//
-//void hoan_doi_dong(int b[][10], int m, int dong1, int dong2) {
-//    cout << "Nhap hai dong can hoan doi (0-based index): ";
-//    cin >> dong1 >> dong2;
-//    for (int j = 0; j < m; j++) {
-//        int temp = b[dong1][j];
-//        b[dong1][j] = b[dong2][j];
-//        b[dong2][j] = temp;
-//    }
-//    cout << "Mang sau khi hoan doi dong:\n";
-//}
-//
+void hoan_doi_cot(int b[][10], int m) {
+    int cot1 = 0; int cot2 = 0;
+    cout << "Nhap hai cot can hoan doi (0-based index): ";
+    cin >> cot1 >> cot2;
+    for (int i = 0; i < m; i++) {
+        int temp = b[i][cot1];
+        b[i][cot1] = b[i][cot2];
+        b[i][cot2] = temp;
+    }
+    cout << "Mang sau khi hoan doi cot:\n" ;
+}
+
+void hoan_doi_dong(int b[][10], int m, int dong1, int dong2) {
+    int dong1 = 0; int dong2 = 0;
+    cout << "Nhap hai dong can hoan doi (0-based index): ";
+    cin >> dong1 >> dong2;
+    for (int j = 0; j < m; j++) {
+        int temp = b[dong1][j];
+        b[dong1][j] = b[dong2][j];
+        b[dong2][j] = temp;
+    }
+    cout << "Mang sau khi hoan doi dong:\n";
+}
+
 void tong_gia_tri_bien(int b[][10], int m, int &tong_bien) {
     tong_bien = 0;
 
